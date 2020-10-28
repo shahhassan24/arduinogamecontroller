@@ -1,0 +1,60 @@
+/*  
+ *  Arduino Game Controller
+ *  
+ *  Crated by Dejan Nedelkovski,
+ *   www.HowToMechatronics.com 
+ *   
+ */
+// Defining variables
+int pinX=A2;   
+int pinY=A1;
+int pinZ=A0;      //accelerometer values
+int pinA5=A5;
+int pinA6=A6;
+int pinA7=A7;     //potentiometer
+
+//int pinA2=A2;
+void setup() 
+{
+  Serial.begin(115200);     // starts the serial communication
+}
+void loop()
+{
+  int valX=analogRead(pinX);     // reads the Analog Input, t.e the value from the X - axis from the accelerometer
+  Serial.print(valX);     // sends that value into the Serial Port
+  Serial.print(",");     // sends addition character right next to the read value needed  later in the Processing IDE for indexing
+
+   delay(30);
+  int valY=analogRead(pinY);
+  
+  Serial.print(valY);
+  
+  Serial.print("/");
+  
+  int valZ=analogRead(pinZ);
+  Serial.print(valZ);
+  Serial.print(";");
+//  
+  int valA5=analogRead(pinA5);
+  Serial.print(valA5);
+  Serial.print(":");
+  
+  int valA6=analogRead(pinA6);
+  Serial.print(valA6);
+  Serial.print("<");
+  
+  int valA7=analogRead(pinA7);
+  Serial.print(valA7);
+  Serial.print("!");
+//  
+//  int valA2=analogRead(pinA2);
+//  Serial.print(valA2);
+//  Serial.print("?");
+//  
+//  int valA1=analogRead(pinA1);
+//  Serial.print(valA1);
+//  Serial.print(".");
+//  
+  delay(30);
+  
+}
