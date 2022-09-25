@@ -1,2 +1,5 @@
 # arduinogamecontroller
-A university project for micro controllers
+
+A university project for controlling games using arduino. 
+
+
